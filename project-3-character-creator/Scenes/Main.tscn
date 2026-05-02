@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bpupchlarrosi"]
+
+[ext_resource type="Texture2D" uid="uid://bbrkhoeyo0blt" path="res://Assets/icon.svg" id="1_idj7w"]
+[ext_resource type="Texture2D" uid="uid://b6wgwhdrc252" path="res://Assets/9-2-arrow-png-clipart.png" id="2_kln2b"]
+
+[node name="Node2D" type="Node2D" unique_id=683501601]
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=901780627]
+offset_right = 1155.0
+offset_bottom = 651.0
+color = Color(0.29031694, 0.29031694, 0.29031694, 1)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=184620408]
+position = Vector2(600, 216.00002)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_idj7w")
+
+[node name="HatRightButton" type="TextureButton" parent="." unique_id=1411726065]
+offset_left = 735.0
+offset_top = 48.0
+offset_right = 1105.0
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_kln2b")
+
+[node name="HatLeftButton" type="TextureButton" parent="." unique_id=1190022759]
+offset_left = 356.016
+offset_top = 48.0
+offset_right = 726.016
+offset_bottom = 304.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_kln2b")
+flip_h = true
+
+[node name="ShirtButtonRight" type="TextureButton" parent="." unique_id=716635720]
+offset_left = 735.0
+offset_top = 322.0
+offset_right = 1105.0
+offset_bottom = 578.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_kln2b")
+
+[node name="PantsButtonRight" type="TextureButton" parent="." unique_id=192894454]
+offset_left = 735.0
+offset_top = 487.00003
+offset_right = 1105.0
+offset_bottom = 743.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_kln2b")
+
+[node name="ShirtButtonLeft" type="TextureButton" parent="." unique_id=1903119268]
+offset_left = 356.016
+offset_top = 323.0
+offset_right = 726.016
+offset_bottom = 579.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_kln2b")
+flip_h = true
+
+[node name="PantsButtonLeft" type="TextureButton" parent="." unique_id=408437656]
+offset_left = 356.016
+offset_top = 491.00003
+offset_right = 726.016
+offset_bottom = 747.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_kln2b")
+flip_h = true
+
+[node name="Line2D" type="Line2D" parent="." unique_id=906710437]
+position = Vector2(5, 0)
+points = PackedVector2Array(595, 294, 596, 454, 528, 593, 595, 454, 646, 588, 596, 456, 596, 319, 673, 410, 595, 319, 512, 416)
