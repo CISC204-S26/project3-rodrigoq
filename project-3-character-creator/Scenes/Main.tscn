@@ -12,8 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://dwphek3syii3o" path="res://Assets/Pants/Pants1.webp" id="5_jw32o"]
 [ext_resource type="Script" uid="uid://hu1sgcrle2ck" path="res://Scenes/shirt_button_left.gd" id="6_1p5hy"]
 [ext_resource type="Script" uid="uid://cv4gwpokuh7ac" path="res://Scenes/pants_button_left.gd" id="7_h1m7h"]
+[ext_resource type="Texture2D" uid="uid://b3k6110j0tsl6" path="res://Assets/Hats/Hat2.webp" id="11_2w5on"]
+[ext_resource type="Texture2D" uid="uid://b8lfnt2pfj7g7" path="res://Assets/Shirts/Shirt2.webp" id="13_346fj"]
 [ext_resource type="Script" uid="uid://dmwxr6hmvl0fl" path="res://Scenes/head_color_button.gd" id="13_frkhe"]
 [ext_resource type="Script" uid="uid://dmq7672lsedb0" path="res://Scenes/body_color_button.gd" id="14_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://hmoe221eurhj" path="res://Assets/Pants/Pants2.webp" id="15_0sclb"]
 
 [node name="Node2D" type="Node2D" unique_id=683501601]
 metadata/_edit_lock_ = true
@@ -107,23 +110,25 @@ vertical_alignment = 1
 [node name="Instructions" type="RichTextLabel" parent="." unique_id=1951004772]
 offset_top = 74.0
 offset_right = 325.0
-offset_bottom = 501.0
-text = "Arrows:
-
+offset_bottom = 513.0
+text = "Controls:
 Top Arrows: Change Hat
 Middle Arrows: Change Shirt
 Bottom Arrows: Change Pants
-Color Picker: Change Head Color
+Change head/body color:
+Changes colors to current color picker
+selection.
 
 
-Load Textbox:
-
+Loading Outfits:
 Use the load textbox to load a specific
-outfit. The number in the textbox
-will change as you customize, copy it
-if you would like to load your current
-outfit later, then press the \"Load\"
-button to load it."
+outfit. The number under the character
+is the number for the current outfit,
+copy it if you would like to load the
+current outfit later. Once you have
+entered the number, press the \"Load\"
+button to load the outfit.
+(Outfits do not include head or body color)"
 horizontal_alignment = 1
 
 [node name="Character" type="Node2D" parent="." unique_id=1411358017]
@@ -152,6 +157,12 @@ position = Vector2(601, 99)
 scale = Vector2(0.12249169, 0.14283554)
 texture = ExtResource("3_pbw6q")
 
+[node name="Hat2" type="Sprite2D" parent="Character/Visuals/Clothes/Hats" unique_id=25862964]
+visible = false
+position = Vector2(600.25, 117.99999)
+scale = Vector2(0.2505, 0.215)
+texture = ExtResource("11_2w5on")
+
 [node name="Shirts" type="Node2D" parent="Character/Visuals/Clothes" unique_id=1359271969]
 
 [node name="Shirt1" type="Sprite2D" parent="Character/Visuals/Clothes/Shirts" unique_id=1426271757]
@@ -160,6 +171,12 @@ position = Vector2(602, 397.00003)
 scale = Vector2(0.41462547, 0.4434454)
 texture = ExtResource("4_v1gob")
 
+[node name="Shirt2" type="Sprite2D" parent="Character/Visuals/Clothes/Shirts" unique_id=1726584406]
+visible = false
+position = Vector2(599, 399.5)
+scale = Vector2(0.0864, 0.0844)
+texture = ExtResource("13_346fj")
+
 [node name="Pants" type="Node2D" parent="Character/Visuals/Clothes" unique_id=1706810488]
 
 [node name="Pants1" type="Sprite2D" parent="Character/Visuals/Clothes/Pants" unique_id=1533709182]
@@ -167,6 +184,12 @@ visible = false
 position = Vector2(601.00006, 445)
 scale = Vector2(0.2066667, 0.18449993)
 texture = ExtResource("5_jw32o")
+
+[node name="Pants2" type="Sprite2D" parent="Character/Visuals/Clothes/Pants" unique_id=1042417143]
+visible = false
+position = Vector2(599, 496.125)
+scale = Vector2(0.17499998, 0.1728125)
+texture = ExtResource("15_0sclb")
 
 [node name="HeadColorButton" type="Button" parent="." unique_id=499713501]
 offset_left = 894.0
@@ -192,3 +215,10 @@ offset_top = 16.0
 offset_right = 1189.0
 offset_bottom = 623.0
 scale = Vector2(0.8, 0.8)
+
+[node name="OutfitNumber" type="Label" parent="." unique_id=119716018]
+offset_left = 519.0
+offset_top = 610.0
+offset_right = 678.0
+offset_bottom = 633.0
+text = "Current Outfit: 000"

@@ -6,15 +6,18 @@ var pantsIndex = 0
 
 var hats = [
 	null,
-	preload("res://Assets/Hats/Hat1.webp")
+	preload("res://Assets/Hats/Hat1.webp"),
+	preload("res://Assets/Hats/Hat2.webp")
 ]
 var shirts = [
 	null,
-	preload	("res://Assets/Shirts/Shirt1.webp")
+	preload	("res://Assets/Shirts/Shirt1.webp"),
+	preload("res://Assets/Shirts/Shirt2.webp")
 ]
 var pants = [
 	null,
-	preload("res://Assets/Pants/Pants1.webp")
+	preload("res://Assets/Pants/Pants1.webp"),
+	preload("res://Assets/Pants/Pants2.webp")
 ]
 
 signal hat_changed
