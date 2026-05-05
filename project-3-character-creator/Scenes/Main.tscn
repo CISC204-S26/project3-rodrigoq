@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://bpupchlarrosi"]
 
 [ext_resource type="Texture2D" uid="uid://bbrkhoeyo0blt" path="res://Assets/icon.svg" id="1_idj7w"]
-[ext_resource type="Texture2D" uid="uid://b6wgwhdrc252" path="res://Assets/9-2-arrow-png-clipart.png" id="2_kln2b"]
+[ext_resource type="Texture2D" uid="uid://b6wgwhdrc252" path="res://Assets/Red_Arrow.png" id="2_kln2b"]
+[ext_resource type="Texture2D" uid="uid://byibpgmpbmwrv" path="res://Assets/Hats/Hat1.webp" id="3_pbw6q"]
+[ext_resource type="Script" uid="uid://hxq8twysythd" path="res://Scenes/hat_right_button.gd" id="3_v1gob"]
+[ext_resource type="Script" uid="uid://d1d6habvf8e6i" path="res://Scenes/Character.gd" id="4_50glp"]
+[ext_resource type="Script" uid="uid://bu8gdlflbe3w" path="res://Scenes/shirt_button_right.gd" id="4_grg3l"]
+[ext_resource type="Script" uid="uid://bql8k2xe1rc47" path="res://Scenes/hat_left_button.gd" id="4_jw32o"]
+[ext_resource type="Texture2D" uid="uid://2otudy4p8diy" path="res://Assets/Shirts/Shirt1.webp" id="4_v1gob"]
+[ext_resource type="Script" uid="uid://crwswwmnt8udx" path="res://Scenes/pants_button_right.gd" id="5_frkhe"]
+[ext_resource type="Texture2D" uid="uid://dwphek3syii3o" path="res://Assets/Pants/Pants1.webp" id="5_jw32o"]
+[ext_resource type="Script" uid="uid://hu1sgcrle2ck" path="res://Scenes/shirt_button_left.gd" id="6_1p5hy"]
+[ext_resource type="Script" uid="uid://cv4gwpokuh7ac" path="res://Scenes/pants_button_left.gd" id="7_h1m7h"]
 
 [node name="Node2D" type="Node2D" unique_id=683501601]
 metadata/_edit_lock_ = true
@@ -12,11 +22,6 @@ offset_bottom = 651.0
 color = Color(0.29031694, 0.29031694, 0.29031694, 1)
 metadata/_edit_lock_ = true
 
-[node name="Head" type="Sprite2D" parent="." unique_id=184620408]
-position = Vector2(600, 216.00002)
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("1_idj7w")
-
 [node name="HatRightButton" type="TextureButton" parent="." unique_id=1411726065]
 offset_left = 735.0
 offset_top = 48.0
@@ -24,6 +29,7 @@ offset_right = 1105.0
 offset_bottom = 304.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_kln2b")
+script = ExtResource("3_v1gob")
 
 [node name="HatLeftButton" type="TextureButton" parent="." unique_id=1190022759]
 offset_left = 356.016
@@ -33,6 +39,7 @@ offset_bottom = 304.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_kln2b")
 flip_h = true
+script = ExtResource("4_jw32o")
 
 [node name="ShirtButtonRight" type="TextureButton" parent="." unique_id=716635720]
 offset_left = 735.0
@@ -41,6 +48,7 @@ offset_right = 1105.0
 offset_bottom = 578.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_kln2b")
+script = ExtResource("4_grg3l")
 
 [node name="PantsButtonRight" type="TextureButton" parent="." unique_id=192894454]
 offset_left = 735.0
@@ -49,6 +57,7 @@ offset_right = 1105.0
 offset_bottom = 743.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_kln2b")
+script = ExtResource("5_frkhe")
 
 [node name="ShirtButtonLeft" type="TextureButton" parent="." unique_id=1903119268]
 offset_left = 356.016
@@ -58,6 +67,7 @@ offset_bottom = 579.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_kln2b")
 flip_h = true
+script = ExtResource("6_1p5hy")
 
 [node name="PantsButtonLeft" type="TextureButton" parent="." unique_id=408437656]
 offset_left = 356.016
@@ -67,33 +77,31 @@ offset_bottom = 747.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_kln2b")
 flip_h = true
+script = ExtResource("7_h1m7h")
 
-[node name="Body" type="Line2D" parent="." unique_id=906710437]
-position = Vector2(5, 0)
-points = PackedVector2Array(595, 294, 596, 454, 528, 593, 595, 454, 646, 588, 596, 456, 596, 319, 673, 410, 595, 319, 512, 416)
-
-[node name="LineEdit" type="LineEdit" parent="." unique_id=61722234]
+[node name="LoadTextbox" type="LineEdit" parent="." unique_id=61722234]
 offset_left = 81.0
-offset_top = 491.0
+offset_top = 517.0
 offset_right = 242.0
-offset_bottom = 534.0
+offset_bottom = 560.0
 placeholder_text = "Load Textbox"
 alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1891783508]
+[node name="LoadButton" type="Button" parent="." unique_id=1891783508]
 offset_left = 115.0
-offset_top = 547.0
+offset_top = 573.0
 offset_right = 211.0
-offset_bottom = 588.0
+offset_bottom = 614.0
 text = "Load"
 
 [node name="ColorPicker" type="ColorPicker" parent="." unique_id=1957391615]
-offset_left = 853.0
+offset_left = 891.0
 offset_top = 16.0
-offset_right = 1151.0
+offset_right = 1189.0
 offset_bottom = 623.0
+scale = Vector2(0.8, 0.8)
 
-[node name="Label" type="Label" parent="." unique_id=1333156263]
+[node name="InstructionHeader" type="Label" parent="." unique_id=1333156263]
 offset_right = 325.0
 offset_bottom = 93.0
 theme_override_font_sizes/font_size = 36
@@ -101,10 +109,10 @@ text = "Customizations:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1951004772]
-offset_top = 95.0
+[node name="Instructions" type="RichTextLabel" parent="." unique_id=1951004772]
+offset_top = 74.0
 offset_right = 325.0
-offset_bottom = 481.0
+offset_bottom = 501.0
 text = "Arrows:
 
 Top Arrows: Change Hat
@@ -122,3 +130,52 @@ if you would like to load your current
 outfit later, then press the \"Load\"
 button to load it."
 horizontal_alignment = 1
+
+[node name="Character" type="Node2D" parent="." unique_id=1411358017]
+script = ExtResource("4_50glp")
+
+[node name="OutfitController" type="Node" parent="Character" unique_id=1031328813]
+
+[node name="Visuals" type="Node2D" parent="Character" unique_id=538633004]
+
+[node name="Head" type="Sprite2D" parent="Character/Visuals" unique_id=184620408]
+position = Vector2(600, 216.00002)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_idj7w")
+
+[node name="Body" type="Line2D" parent="Character/Visuals" unique_id=906710437]
+position = Vector2(5, 0)
+points = PackedVector2Array(595, 294, 596, 454, 528, 593, 595, 454, 646, 588, 596, 456, 596, 319, 673, 410, 595, 319, 512, 416)
+
+[node name="Clothes" type="Node2D" parent="Character/Visuals" unique_id=5460689]
+
+[node name="Hats" type="Node2D" parent="Character/Visuals/Clothes" unique_id=43328334]
+
+[node name="Hat1" type="Sprite2D" parent="Character/Visuals/Clothes/Hats" unique_id=1934057207]
+visible = false
+position = Vector2(601, 99)
+scale = Vector2(0.12249169, 0.14283554)
+texture = ExtResource("3_pbw6q")
+
+[node name="Shirts" type="Node2D" parent="Character/Visuals/Clothes" unique_id=1359271969]
+
+[node name="Shirt1" type="Sprite2D" parent="Character/Visuals/Clothes/Shirts" unique_id=1426271757]
+visible = false
+position = Vector2(602, 397.00003)
+scale = Vector2(0.41462547, 0.4434454)
+texture = ExtResource("4_v1gob")
+
+[node name="Pants" type="Node2D" parent="Character/Visuals/Clothes" unique_id=1706810488]
+
+[node name="Pants1" type="Sprite2D" parent="Character/Visuals/Clothes/Pants" unique_id=1533709182]
+visible = false
+position = Vector2(601.00006, 445)
+scale = Vector2(0.2066667, 0.18449993)
+texture = ExtResource("5_jw32o")
+
+[node name="ColorPickerButton" type="Button" parent="." unique_id=499713501]
+offset_left = 955.0
+offset_top = 573.0
+offset_right = 1067.0
+offset_bottom = 614.0
+text = "Change Color"
