@@ -6,13 +6,13 @@
 [node name="Node2D" type="Node2D" unique_id=683501601]
 metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=901780627]
+[node name="Background" type="ColorRect" parent="." unique_id=901780627]
 offset_right = 1155.0
 offset_bottom = 651.0
 color = Color(0.29031694, 0.29031694, 0.29031694, 1)
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=184620408]
+[node name="Head" type="Sprite2D" parent="." unique_id=184620408]
 position = Vector2(600, 216.00002)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_idj7w")
@@ -68,6 +68,57 @@ scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_kln2b")
 flip_h = true
 
-[node name="Line2D" type="Line2D" parent="." unique_id=906710437]
+[node name="Body" type="Line2D" parent="." unique_id=906710437]
 position = Vector2(5, 0)
 points = PackedVector2Array(595, 294, 596, 454, 528, 593, 595, 454, 646, 588, 596, 456, 596, 319, 673, 410, 595, 319, 512, 416)
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=61722234]
+offset_left = 81.0
+offset_top = 491.0
+offset_right = 242.0
+offset_bottom = 534.0
+placeholder_text = "Load Textbox"
+alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1891783508]
+offset_left = 115.0
+offset_top = 547.0
+offset_right = 211.0
+offset_bottom = 588.0
+text = "Load"
+
+[node name="ColorPicker" type="ColorPicker" parent="." unique_id=1957391615]
+offset_left = 853.0
+offset_top = 16.0
+offset_right = 1151.0
+offset_bottom = 623.0
+
+[node name="Label" type="Label" parent="." unique_id=1333156263]
+offset_right = 325.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 36
+text = "Customizations:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1951004772]
+offset_top = 95.0
+offset_right = 325.0
+offset_bottom = 481.0
+text = "Arrows:
+
+Top Arrows: Change Hat
+Middle Arrows: Change Shirt
+Bottom Arrows: Change Pants
+Color Picker: Change Head Color
+
+
+Load Textbox:
+
+Use the load textbox to load a specific
+outfit. The number in the textbox
+will change as you customize, copy it
+if you would like to load your current
+outfit later, then press the \"Load\"
+button to load it."
+horizontal_alignment = 1
