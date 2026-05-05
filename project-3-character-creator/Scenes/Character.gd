@@ -3,6 +3,8 @@ extends Node2D
 @onready var hat_sprite = $Visuals/Clothes/Hats/Hat1
 @onready var shirt_sprite = $Visuals/Clothes/Shirts/Shirt1
 @onready var pants_sprite = $Visuals/Clothes/Pants/Pants1
+@onready var head = $Visuals/Head
+@onready var body = $Visuals/Body
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +18,17 @@ func _ready() -> void:
 	GameState.pants_changed.connect(update_pants)
 	update_pants(GameState.pantsIndex)
 	
+	GameState.head_color_changed.connect(update_head_color)
+	update_head_color(GameState.head_color)
+	
+	GameState.skin_color_changed.connect(update_skin_color)
+	update_skin_color(GameState.skin_color)
+
+func update_head_color(color: Color):
+	head.modulate = color
+
+func update_skin_color(color: Color):
+	body.modulate = color
 
 func update_hat(index):
 	var tex = GameState.hats[index]

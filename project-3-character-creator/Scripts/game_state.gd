@@ -21,14 +21,21 @@ signal hat_changed
 signal shirt_changed
 signal pants_changed
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var head_color: Color = Color.WHITE
+var skin_color: Color = Color.WHITE
 
+signal head_color_changed(color)
+signal skin_color_changed(color)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func set_head_color(color: Color):
+	head_color = color
+	print("New head color: ", color)
+	head_color_changed.emit(color)
+
+func set_skin_color(color: Color):
+	skin_color = color
+	print("New body color: ", color)
+	skin_color_changed.emit(color)
 
 func change_hat(direction):
 	hatIndex = (hatIndex + direction) % hats.size()

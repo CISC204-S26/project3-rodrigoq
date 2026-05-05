@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dwphek3syii3o" path="res://Assets/Pants/Pants1.webp" id="5_jw32o"]
 [ext_resource type="Script" uid="uid://hu1sgcrle2ck" path="res://Scenes/shirt_button_left.gd" id="6_1p5hy"]
 [ext_resource type="Script" uid="uid://cv4gwpokuh7ac" path="res://Scenes/pants_button_left.gd" id="7_h1m7h"]
+[ext_resource type="Script" uid="uid://dmwxr6hmvl0fl" path="res://Scenes/head_color_button.gd" id="13_frkhe"]
+[ext_resource type="Script" uid="uid://dmq7672lsedb0" path="res://Scenes/body_color_button.gd" id="14_1p5hy"]
 
 [node name="Node2D" type="Node2D" unique_id=683501601]
 metadata/_edit_lock_ = true
@@ -94,13 +96,6 @@ offset_right = 211.0
 offset_bottom = 614.0
 text = "Load"
 
-[node name="ColorPicker" type="ColorPicker" parent="." unique_id=1957391615]
-offset_left = 891.0
-offset_top = 16.0
-offset_right = 1189.0
-offset_bottom = 623.0
-scale = Vector2(0.8, 0.8)
-
 [node name="InstructionHeader" type="Label" parent="." unique_id=1333156263]
 offset_right = 325.0
 offset_bottom = 93.0
@@ -173,9 +168,27 @@ position = Vector2(601.00006, 445)
 scale = Vector2(0.2066667, 0.18449993)
 texture = ExtResource("5_jw32o")
 
-[node name="ColorPickerButton" type="Button" parent="." unique_id=499713501]
-offset_left = 955.0
+[node name="HeadColorButton" type="Button" parent="." unique_id=499713501]
+offset_left = 894.0
 offset_top = 573.0
-offset_right = 1067.0
+offset_right = 1006.0
 offset_bottom = 614.0
-text = "Change Color"
+text = "Change Head
+Color"
+script = ExtResource("13_frkhe")
+
+[node name="BodyColorButton" type="Button" parent="." unique_id=979386125]
+offset_left = 1017.0
+offset_top = 573.0
+offset_right = 1129.0
+offset_bottom = 614.0
+text = "Change Body
+Color"
+script = ExtResource("14_1p5hy")
+
+[node name="ColorPicker" type="ColorPicker" parent="." unique_id=1957391615]
+offset_left = 891.0
+offset_top = 16.0
+offset_right = 1189.0
+offset_bottom = 623.0
+scale = Vector2(0.8, 0.8)
