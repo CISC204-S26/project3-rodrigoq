@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3n1qkusqyilc"
-path="res://.godot/imported/Pants1.webp-b2e8b3b4a8bb2632287b4c68f0868ace.ctex"
+uid="uid://dvg0wcc53gfsw"
+path="res://.godot/imported/Pants3.png-a0630b836c657e944fd4aa920250cf28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pants/Pants1.webp"
-dest_files=["res://.godot/imported/Pants1.webp-b2e8b3b4a8bb2632287b4c68f0868ace.ctex"]
+source_file="res://Assets/Pants/Pants3.png"
+dest_files=["res://.godot/imported/Pants3.png-a0630b836c657e944fd4aa920250cf28.ctex"]
 
 [params]
 
