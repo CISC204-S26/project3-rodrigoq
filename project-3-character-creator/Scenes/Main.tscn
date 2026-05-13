@@ -157,14 +157,6 @@ offset_right = 1189.0
 offset_bottom = 623.0
 scale = Vector2(0.8, 0.8)
 
-[node name="OutfitNumber" type="Label" parent="." unique_id=119716018]
-visible = false
-offset_left = 519.0
-offset_top = 610.0
-offset_right = 678.0
-offset_bottom = 633.0
-text = "Current Outfit: 000"
-
 [node name="Load" type="CanvasLayer" parent="." unique_id=1634157333]
 script = ExtResource("14_fq0cl")
 
@@ -182,6 +174,13 @@ offset_top = 573.0
 offset_right = 211.0
 offset_bottom = 614.0
 text = "Load"
+
+[node name="OutfitNumber" type="Label" parent="Load" unique_id=119716018]
+offset_left = 519.0
+offset_top = 610.0
+offset_right = 678.0
+offset_bottom = 633.0
+text = "Current Outfit: 000"
 
 [node name="OutfitButtons" type="CanvasLayer" parent="." unique_id=1698434784]
 

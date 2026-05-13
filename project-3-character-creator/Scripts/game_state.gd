@@ -104,3 +104,6 @@ func load_outfit_code(code: String):
 	pants_changed.emit(pantsIndex)
 	
 	print("Loaded outfit code: ", code)
+
+func get_outfit_code() -> String:
+	return str(hatIndex) + str(shirtIndex) + str(pantsIndex)
